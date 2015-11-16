@@ -4,7 +4,15 @@ The `modbusemu` package is Node.js module for Modbus RTU devices emulation.
 
 It requires [Node.js](http://nodejs.org/) to run and [npm](https://www.npmjs.org/) to be installed.
 
-This project on the early development stage, and now supported only GNU/Linux environment and Modbus functions 0x01 ... 0x06, 0x0f, 0x10  
+This project now supported only GNU/Linux environment and following Modbus functions:
+* `0x01` - read coils
+* `0x02` - read discrete inputs
+* `0x03` - read holding registers
+* `0x04` - read input registers
+* `0x05` - write single coil
+* `0x06` - write single register
+* `0x0f` - write multiple coil
+* `0x10` - write multiple register
 
 # Installing
 
