@@ -1,0 +1,23 @@
+{
+  "name": "modbusemu",
+  "version": "0.1.0",
+  "description": "Node.js module for Modbus RTU devices emulation.",
+  "main": "./lib/emulator.js",
+  "scripts": {
+    "test": "./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Serge78rus/node-modbusemu.git"
+  },
+  "keywords": [
+    "modbus",
+    "communication",
+    "scada"
+  ],
+  "author": "Serge L. Ryadkow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Serge78rus/node-modbusemu/issues"
+  }
+}
