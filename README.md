@@ -164,10 +164,51 @@ where `err` is `null` if success or Error object if an error occurred
 
 ### readCoils(addr, cnt)
 
+User function for reading coils (need for Modbus function 0x01)
+* `addr` - first coil address
+* `cnt` - number of coils to read
 
+Return value - an array of boolean values, that represent the status of coils 
 
-... Article in development ...
+### readDiscrInps(addr, cnt)
 
+User function for reading discrete inputs (need for Modbus function 0x02)
+* `addr` - first discrete input address
+* `cnt` - number of discrete inputs to read
+
+Return value - an array of boolean values, that represent the status of discrete inputs 
+
+### readHoldRegs(addr, cnt)
+
+User function for reading holding registers (need for Modbus function 0x03)
+* `addr` - first holding register address
+* `cnt` - number of holding registers to read
+
+Return value - an array of unsigned integer values, that represent the status of holding registers 
+
+### readInpRegs(addr, cnt)
+
+User function for reading input registers (need for Modbus function 0x04)
+* `addr` - first input register address
+* `cnt` - number of input registers to read
+
+Return value - an array of unsigned integer values, that represent the status of input registers 
+
+### writeCoils(addr, vals)
+
+User function for writing coils status (need for Modbus functions 0x05 and 0x0f)
+* `addr` - first coil address
+* `vals` - an array of boolean values, that represent the status of coils
+
+Returns a boolean value: `true` if successful or `false` when attempting to go beyond the range of valid coils addresses
+
+### writeRegs(addr, vals)
+
+User function for writing holding registers status (need for Modbus functions 0x06 and 0x10)
+* `addr` - first register address
+* `vals` - an array of unsigned integer values, that represent the status of registers
+
+Returns a boolean value: `true` if successful or `false` when attempting to go beyond the range of valid holding registers addresses
 
 # License
 
