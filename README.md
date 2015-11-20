@@ -1,4 +1,4 @@
-# node-modbusrtu
+# node-modbusemu
 
 The `modbusemu` package is Node.js module for Modbus RTU devices emulation.
 
@@ -123,7 +123,51 @@ var emulator = new Emulator(
 
 # API
 
-In development
+## Modbus(dev, slave, opt, functions, done)
+
+Constructor of emulator object
+* `dev` - communication device name (for example: /dev/ttyUSB0)
+* `slave` - slave address
+* `opt` - communication options
+* `functions` - hash array of user functions
+* `done` - callback function
+ 
+Object `opt` may contain some of the following fields:
+```javascript
+{
+	baud: 9600, //communication speed
+	fmt: "8n2", //data bits, parity and stop bits
+}
+```
+If some fields are omitted, they take default values as described above
+
+Object `functions` may contain some of the following user functions:
+```javascript
+{
+	readCoils: function(addr, cnt) { /* user function for read coils */ },
+	readDiscrInps: function(addr, cnt) { /* user function for read discrete inputs */ },
+	readHoldRegs: function(addr, cnt) { /* user function for read holding registers */ },
+	readInpRegs: function(addr, cnt) { /* user function for read input registers */ },
+	writeCoils: function(addr, vals) { /* user function for write coils */ },
+	writeRegs: function(addr, vals) { / *user function for write holding registers */ }
+}
+```
+If some of the user functions are omitted, the corresponding Modbus protocol functions will return an exception code 1 (illegal function).
+
+Function `done` take one argument: 
+```javascript
+done(err)
+```
+where `err` is `null` if success or Error object if an error occurred
+
+## User functions
+
+### readCoils(addr, cnt)
+
+
+
+... Article in development ...
+
 
 # License
 
