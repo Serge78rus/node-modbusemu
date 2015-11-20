@@ -1,6 +1,6 @@
 {
   "name": "modbusemu",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node.js module for Modbus RTU devices emulation.",
   "main": "./lib/emulator.js",
   "scripts": {
