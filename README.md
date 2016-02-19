@@ -28,7 +28,7 @@ This project now supported only GNU/Linux environment and following Modbus funct
 Example of usage in `test.js`
 ```javascript
 //var Emulator = require("../lib/emulator").Emulator; //relative path from test directory
-var Emulator = require("../lib/emulator").Emulator; //if module installed to default location
+var Emulator = require("modbusemu").Emulator; //if module installed to default location
 
 //emulation data
 var data = {
